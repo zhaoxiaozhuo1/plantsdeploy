@@ -12,7 +12,7 @@ import streamlit.components.v1 as components
 
 #from streamlit.server.server import Server
 # from streamlit.script_run_context import get_script_run_ctx as get_report_ctx
-from streamlit.scriptrunner import get_script_run_ctx as get_report_ctx
+#from streamlit.scriptrunner import get_script_run_ctx as get_report_ctx
 
 #import graphviz
 import pydeck as pdk
@@ -125,9 +125,9 @@ def show():
     #    st.warning('Get pictures fail.')
 
     st.markdown('###  Natural Scenery')
-    session_id = get_report_ctx().session_id
+    #session_id = get_report_ctx().session_id
     #sessions = Server.get_current()._session_info_by_id
-    session_ws = sessions[session_id].ws
+    #session_ws = sessions[session_id].ws
     #st.sidebar.info(f'当前系统访问流量：{len(sessions)}')
     col1,col2=st.columns(2)
     video1,video2=get_video_bytes()
