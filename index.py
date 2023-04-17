@@ -1,10 +1,16 @@
 import streamlit as st
-import pymysql
+#import pymysql
 from firstpage import *
 from opencv import *
 st.set_page_config(page_title="YSU-农作物健康识别系统",layout="wide")
+import mysql.connector
 
-con = pymysql.connect(host="10.51.105.79", user="root", password="zhaozhuo2001.", database="plants_disease", charset="utf8")
+# Initialize connection.
+# Uses st.cache_resource to only run once.
+
+def init_connection():
+    return mysql.connector.connect(**st.secrets["mysql"])
+con = init_connection()
 
 c = con.cursor()
 
