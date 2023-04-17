@@ -1,4 +1,5 @@
 scikit-learn==1.2.1
+pymysql==1.0.2
 tqdm==4.64.0
 opencv-python-headless
 torchvision==0.9.0
